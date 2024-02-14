@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario y Tabla</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <br><br>
+    <nav class="nav justify-content-center">
+        <a class="nav-link active" href="#Jose">José</a>
+        <a class="nav-link" href="#Estudios">Proyectos</a>
+        <a class="nav-link disabled" href="#">Trabajos</a>
+    </nav>
+
+    <br><br><br><br>
+    <section id="Jose">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                </div>
+                <div class="col-5">
+                    <div class="container">
+                        <div class="caja">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://static.vecteezy.com/system/resources/previews/019/879/198/original/user-icon-on-transparent-background-free-png.png" class="imagen" alt="usuario">
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="row">
+                                <div class="col">
+                                    <h2>José de la Fuente Arauna</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caja">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png" height="40" width="40" class="redes" alt="redes">
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-2">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" height="40" width="40" class="redes" alt="redes">
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-2">
+                                    <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-mobile-software-icon-png-image_6315991.png" height="40" width="40" class="redes" alt="redes">
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-2">
+                                    <img src="https://static.vecteezy.com/system/resources/previews/027/395/710/non_2x/twitter-brand-new-logo-3-d-with-new-x-shaped-graphic-of-the-world-s-most-popular-social-media-free-png.png" height="40" width="40" class="redes" alt="redes">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="caja">
+                        <p><strong>Correo electrónico:</strong> jdelafarauna@gmail.com </p>
+                        <p><strong>Teléfono:</strong> (+34) 635520280 </p>
+                        <p><strong>Idiomas:</strong></p>
+                        <ul>
+                            <li>Español (nativo)</li>
+                            <li>Ingles (C1)</li>
+                            <li>Frances (Basico)</li>
+                        </ul>
+                        <p><strong>Titulaciones:</strong></p>
+                        <ul>
+                            <li>Bachillerato <a href="https://www.fomento.edu/elprado/">(Colegio de Fomento El Prado)</a></li>
+                            <li>Grado en Ingenieria Informática <a href="https://www.urjc.es/etsii">(URJC)</a></li>
+                        </ul>
+                        <p><strong>Aficiones:</strong></p>
+                        <ul>
+                            <li>Deportes de equipo</li>
+                            <li>Aprender idiomas</li>
+                            <li>Voluntariado</li>
+                            <li>Viajar</li>
+                            <li>Automovilismo</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1">
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <section id="Estudios">
+        <div class="container">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="nombreHelpId">
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" name="apellidos" id="apellidos" aria-describedby="apellidosHelpId">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId">
+                    </div>
+                    <button id="miBoton" class="btn btn-primary">Guardar</button>
+                    <br><br>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-body">
+                            
+                        </tbody>
+                    </table>
+                    <script>
+                        const datos = [];
+
+                        const boton = document.getElementById("miBoton");
+
+                        boton.addEventListener("click", function() {
+                            const nombre = document.getElementById('nombre').value;
+                            const apellidos = document.getElementById('apellidos').value;
+                            const email = document.getElementById('email').value;
+
+                            const nuevoDato = { nombre, apellidos, email };
+                            datos.push(nuevoDato);
+
+                            const tablaBody = document.getElementById("tabla-body");
+                            tablaBody.innerHTML = "";
+
+                            datos.forEach(dato => {
+                                const fila = document.createElement("tr");
+
+                                const celdaNombre = document.createElement("td");
+                                celdaNombre.textContent = dato.nombre;
+                                fila.appendChild(celdaNombre);
+
+                                const celdaApellidos = document.createElement("td");
+                                celdaApellidos.textContent = dato.apellidos;
+                                fila.ariaColCount;
+                                fila.appendChild(celdaApellidos);
+
+                                const celdaEmail = document.createElement("td");
+                                celdaEmail.textContent = dato.email;
+                                fila.appendChild(celdaEmail);
+
+                                tablaBody.appendChild(fila);
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+
+</body>
+
+</html>
