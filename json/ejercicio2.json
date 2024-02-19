@@ -1,0 +1,20 @@
+{"Alumnos" :
+    
+    {
+        "alumno" : [
+            {
+                "nombre" : "juan",
+                "edad" : "18",
+                "nombre_secreto" : "juanito",
+                "poderes" : ["levitar","volar","teletransportarse"]
+            }, 
+            {
+                "nombre" : "pedro",
+                "edad" : "28",
+                "nombre_secreto" : "pedrito",
+                "poderes" : ["correr","invisibilidad","rayos X"]
+            }
+        ]
+    }
+    
+}
