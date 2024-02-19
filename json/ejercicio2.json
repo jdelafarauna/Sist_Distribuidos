@@ -1,7 +1,7 @@
 {"Alumnos" :
     
     {
-        "alumno" : [
+        "alumnos" : [
             {
                 "nombre" : "juan",
                 "edad" : "18",
@@ -13,7 +13,7 @@
                 "edad" : "28",
                 "nombre_secreto" : "pedrito",
                 "poderes" : ["correr","invisibilidad","rayos X"]
-            }
+            } 
         ]
     }
     
