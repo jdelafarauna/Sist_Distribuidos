@@ -1,0 +1,29 @@
+{"Puntos" : 
+    [
+        {
+            "punto" : {
+                "latitud" : "latitud",
+                "longitud" : "longitud",
+                "ciudad" : "ciudad",
+                "descripcion" : "descripcion" 
+            }
+        },
+        {
+            "punto" : {
+                "latitud" : "latitud",
+                "longitud" : "longitud",
+                "ciudad" : "ciudad",
+                "descripcion" : "descripcion" 
+            }
+        },
+        {
+            "punto" : {
+                "latitud" : "latitud",
+                "longitud" : "longitud",
+                "ciudad" : "ciudad",
+                "descripcion" : "descripcion" 
+            }
+        }
+    ]
+
+}
